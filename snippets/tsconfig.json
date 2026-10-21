@@ -1,0 +1,30 @@
+{
+  "TCEMAIN table": {
+    "prefix": "tcemain",
+    "body": "TCEMAIN.table.${1:pages}.${2:disablePrependAtCopy} = ${3:1}",
+    "description": "TCEMAIN table setting"
+  },
+  "TCEFORM field": {
+    "prefix": "tceform",
+    "body": [
+      "TCEFORM.${1:pages}.${2:layout} {",
+      "  $0",
+      "}"
+    ],
+    "description": "TCEFORM field configuration"
+  },
+  "Condition": {
+    "prefix": "condition",
+    "body": [
+      "[${1:condition}]",
+      "  $0",
+      "[END]"
+    ],
+    "description": "Condition block"
+  },
+  "@import": {
+    "prefix": "import",
+    "body": "@import '${1:EXT:site_package/Configuration/TsConfig/Page/config.tsconfig}'",
+    "description": "Import TSconfig file"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "PAGE object": {
+    "prefix": "page",
+    "body": [
+      "page = PAGE",
+      "page {",
+      "  typeNum = ${1:0}",
+      "  10 = ${2:FLUIDTEMPLATE}",
+      "  $0",
+      "}"
+    ],
+    "description": "PAGE object"
+  },
+  "FLUIDTEMPLATE": {
+    "prefix": "fluidtemplate",
+    "body": [
+      "${1:10} = FLUIDTEMPLATE",
+      "${1:10} {",
+      "  templateName = ${2:Default}",
+      "  templateRootPaths {",
+      "    10 = ${3:EXT:site_package/Resources/Private/Templates/}",
+      "  }",
+      "  $0",
+      "}"
+    ],
+    "description": "FLUIDTEMPLATE content object"
+  },
+  "TEXT": {
+    "prefix": "text",
+    "body": [
+      "${1:10} = TEXT",
+      "${1:10}.value = ${2}"
+    ],
+    "description": "TEXT content object"
+  },
+  "COA": {
+    "prefix": "coa",
+    "body": [
+      "${1:10} = COA",
+      "${1:10} {",
+      "  10 = ${2:TEXT}",
+      "  $0",
+      "}"
+    ],
+    "description": "COA content object"
+  },
+  "lib object": {
+    "prefix": "lib",
+    "body": [
+      "lib.${1:name} = ${2:TEXT}",
+      "lib.${1:name} {",
+      "  $0",
+      "}"
+    ],
+    "description": "Object below lib."
+  },
+  "Condition": {
+    "prefix": "condition",
+    "body": [
+      "[${1:condition}]",
+      "  $0",
+      "[END]"
+    ],
+    "description": "Condition block"
+  },
+  "Condition with else": {
+    "prefix": "conditionelse",
+    "body": [
+      "[${1:condition}]",
+      "  $2",
+      "[ELSE]",
+      "  $0",
+      "[END]"
+    ],
+    "description": "Condition block with else branch"
+  },
+  "@import": {
+    "prefix": "import",
+    "body": "@import '${1:EXT:site_package/Configuration/TypoScript/setup.typoscript}'",
+    "description": "Import TypoScript file"
+  },
+  "Multiline value": {
+    "prefix": "multiline",
+    "body": [
+      "${1:identifier} (",
+      "  $0",
+      ")"
+    ],
+    "description": "Multiline value"
+  }
+}
