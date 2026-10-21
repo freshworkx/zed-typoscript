@@ -1,0 +1,13 @@
+id = "typoscript"
+name = "TypoScript"
+version = "0.0.1"
+schema_version = 1
+authors = ["J. Neumann <info@freshworkx.de>"]
+description = "TypoScript and TSconfig syntax highlighting and snippets for TYPO3."
+repository = "https://github.com/freshworkx/zed-typoscript"
+
+snippets = ["./snippets/typoscript.json", "./snippets/tsconfig.json"]
+
+[grammars.typoscript]
+repository = "https://github.com/Teddytrombone/tree-sitter-typoscript"
+rev = "b5d0162b328ec52cf300054a8a23d47f84f55cb4"

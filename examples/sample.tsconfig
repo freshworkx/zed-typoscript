@@ -1,0 +1,19 @@
+@import 'EXT:site_package/Configuration/TsConfig/Page/*.tsconfig'
+
+# Disable "(copy N)" suffix when copying pages
+TCEMAIN.table.pages.disablePrependAtCopy = 1
+
+TCEFORM.pages.layout {
+  removeItems = 1,2
+  altLabels.0 = Standard
+}
+
+mod.web_layout.BackendLayouts {
+  default {
+    title = Default
+  }
+}
+
+[backend.user.isAdmin]
+  TCEMAIN.table.tt_content.disablePrependAtCopy = 1
+[END]
